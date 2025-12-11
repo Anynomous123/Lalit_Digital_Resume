@@ -36,7 +36,7 @@ PROJECTS = {
    }
 
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON,layout="wide")
 
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
@@ -82,7 +82,7 @@ data = {
     "Percentage":["","" ,	"78.00%",	"81.00%",	"82.00%",	"86.00%"],
 }
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data,use_container_width=True)
 df = df.set_index([pd.Index(['1', '2', '3', '4','5','6'])])
 st.write(df)
 #st.table(df)
@@ -173,7 +173,7 @@ data = {
 "Year":	[2023,	2022,	2022,	2021,	2022,	2021,		2022,	2022,2021,	2022,	2021,	2021,	2019],
 "Publisher":	["APS",	"Pleiades Publishing Moscow",	"Springer US New York","","","","","","","","","",""],										
 }
-df = pd.DataFrame(data)
+df = pd.DataFrame(data,use_container_width=True)
 df = df.set_index([pd.Index(['1', '2','3','4','5','6','7','8','9','10','11','12','13'])])
 st.write(df)
 #st.table(df)
