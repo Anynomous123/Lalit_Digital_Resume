@@ -82,7 +82,7 @@ data = {
     "Percentage":["","" ,	"78.00%",	"81.00%",	"82.00%",	"86.00%"],
 }
 
-df = pd.DataFrame(data, use_container_width=True,use_container_width=True)
+df = pd.DataFrame(data, use_container_width=True)
 df = df.set_index([pd.Index(['1', '2', '3', '4','5','6'])])
 st.write(df)
 #st.table(df)
